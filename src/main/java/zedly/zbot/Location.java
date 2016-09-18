@@ -127,6 +127,10 @@ public class Location {
     public Location centerHorizontally() {
         return new Location(getBlockX() + 0.5, getBlockY(), getBlockZ() + 0.5, getYaw(), getPitch());        
     }
+    
+    public Location withYawPitch(double yaw, double pitch) {
+        return new Location(getX(), getY(), getZ(), yaw, pitch);
+    }
 
     @Override
     public Location clone() {
