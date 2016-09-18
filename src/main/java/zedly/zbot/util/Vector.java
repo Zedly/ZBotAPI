@@ -12,8 +12,13 @@ public abstract class Vector {
 
     public abstract double getPitch();
 
+    @Deprecated
     public abstract double getRadius();
 
+    public abstract double getLength();
+    
+    public abstract double getHorizontalLength();
+    
     public abstract Vector add(Vector v2);
 
     public abstract Vector multiply(double d);

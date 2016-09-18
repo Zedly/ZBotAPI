@@ -43,9 +43,20 @@ public class CartesianVector extends Vector {
         return toSpherical().getPitch();
     }
 
+    @Deprecated
     @Override
     public double getRadius() {
         return Math.sqrt(x * x + y * y + z * z);
+    }
+
+    @Override
+    public double getLength() {
+        return Math.sqrt(x * x + y * y + z * z);
+    }
+
+    @Override
+    public double getHorizontalLength() {
+        return Math.sqrt(x * x + z * z);
     }
 
     @Override
@@ -101,12 +112,10 @@ public class CartesianVector extends Vector {
             } else {
                 yaw = -Math.PI;
             }
+        } else if (x >= 0) {
+            yaw = Math.atan(z / x) - 1.570796326794896619231321691639751442;
         } else {
-            if (x >= 0) {
-                yaw = Math.atan(z / x) - 1.570796326794896619231321691639751442;
-            } else {
-                yaw = 1.570796326794896619231321691639751442 - Math.atan(-z / x);
-            }
+            yaw = 1.570796326794896619231321691639751442 - Math.atan(-z / x);
         }
         return new CylindricalVector(yaw, hr, y);
     }
@@ -129,12 +138,10 @@ public class CartesianVector extends Vector {
             } else {
                 yaw = -Math.PI;
             }
+        } else if (x >= 0) {
+            yaw = Math.atan(z / x) - 1.570796326794896619231321691639751442;
         } else {
-            if (x >= 0) {
-                yaw = Math.atan(z / x) - 1.570796326794896619231321691639751442;
-            } else {
-                yaw = 1.570796326794896619231321691639751442 - Math.atan(-z / x);
-            }
+            yaw = 1.570796326794896619231321691639751442 - Math.atan(-z / x);
         }
         return new SphericalVector(yaw, pitch, radius);
     }
