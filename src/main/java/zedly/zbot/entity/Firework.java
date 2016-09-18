@@ -5,7 +5,7 @@ import zedly.zbot.inventory.ItemStack;
 /**
  * Represents a firework.
  */
-public interface Firework extends Entity
+public interface Firework extends Object
 {
 	/**
 	 * @return the ItemStack this firework came from.
