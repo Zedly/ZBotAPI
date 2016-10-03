@@ -1,14 +1,14 @@
 package zedly.zbot.inventory;
 
-public interface Inventory
-{
-	ItemStack getSlot(int i);
+public interface Inventory {
 
-	int getSelectedSlot();
+    ItemStack getSlot(int i);
 
-	ItemStack getItemInHand();
+    int getSelectedSlot();
 
-	ItemStack getItemOnCursor();
+    ItemStack getItemInHand();
 
-	void clickSlot(int slot, int mode, int action);
+    ItemStack getItemOnCursor();
+
+    void clickSlot(int slot, int mode, int action);
 }

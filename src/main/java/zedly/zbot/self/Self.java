@@ -82,6 +82,8 @@ public interface Self extends Player {
     
     void swingArm(boolean leftHand);
     
+    void useItem(boolean leftHand);
+    
     void unregisterEvents(Listener listener);
     
     void writeToSign(Location loc, String line1, String line2, String line3, String line4);
