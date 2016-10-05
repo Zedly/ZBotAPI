@@ -16,14 +16,8 @@ import zedly.zbot.util.Vector;
 public class Location {
 
     private double x, y, z, yaw, pitch;
-    private boolean onGround = true;
-
+   
     public Location() {
-    }
-
-    public Location(double x, double y, double z, double yaw, double pitch, boolean onGround) {
-        this(x, y, z, yaw, pitch);
-        this.onGround = onGround;
     }
 
     public Location(double x, double y, double z, double yaw, double pitch) {
@@ -110,10 +104,6 @@ public class Location {
 
     public double getPitch() {
         return pitch;
-    }
-
-    public boolean onGround() {
-        return onGround;
     }
 
     public long toLong() {
