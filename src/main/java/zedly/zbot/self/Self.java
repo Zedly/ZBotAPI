@@ -12,12 +12,10 @@ import zedly.zbot.plugin.ZBotPlugin;
 
 public interface Self extends Player {
 
-    @Deprecated
     void attackEntity(Entity ent);
 
     void cancelTask(int i);
 
-    @Deprecated
     void closeWindow();
 
     ClientSettings getClientSettings();
@@ -34,85 +32,64 @@ public interface Self extends Player {
     @Override
     Location getLocation();
 
-    @Deprecated
     void interactWithEntity(Entity ent, boolean leftHand);
 
-    @Deprecated
     void interactWithEntity(Entity ent, Location loc, boolean leftHand);
 
-    @Deprecated
+    void lookAt(double yaw, double pitch);
+    
     void moveTo(double x, double y, double z);
 
-    @Deprecated
     void moveTo(double x, double y, double z, double yaw, double pitch);
 
-    @Deprecated
     void moveTo(Location loc);
 
-    @Deprecated
     void performAction(int action);
 
-    @Deprecated
     void placeBlock(int x, int y, int z);
 
-    @Deprecated
     void placeBlock(Location loc);
 
-    @Deprecated
     void breakBlock(int x, int y, int z);
 
-    @Deprecated
     void breakBlock(int x, int y, int z, int millis, Runnable callback);
 
-    @Deprecated
     void breakBlock(Location loc);
 
-    @Deprecated
     void breakBlock(Location loc, int millis, Runnable callback);
 
-    @Deprecated
     void clickBlock(int x, int y, int z);
 
-    @Deprecated
     void clickBlock(Location loc);
 
     void registerEvents(Listener listener);
 
-    @Deprecated
     void respawn();
 
     int scheduleSyncDelayedTask(ZBotPlugin plugin, Runnable r, long delay);
 
     int scheduleSyncRepeatingTask(ZBotPlugin plugin, Runnable r, long delay, long interval);
 
-    @Deprecated
     void selectSlot(int i);
 
-    @Deprecated
     void sendChat(String message);
 
-    @Deprecated
     void setAbilities(int abilities);
 
     void setClientSettings(ClientSettings clientSettings);
 
     void shutdown();
 
-    @Deprecated
     void sneak(boolean sneak);
 
-    @Deprecated
     void sprint(boolean sprint);
 
-    @Deprecated
     void swingArm(boolean leftHand);
 
-    @Deprecated
     void useItem(boolean leftHand);
 
     void unregisterEvents(Listener listener);
 
-    @Deprecated
     void writeToSign(Location loc, String line1, String line2, String line3, String line4);
 
 }
