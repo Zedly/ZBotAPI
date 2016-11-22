@@ -3,6 +3,7 @@ package zedly.zbot.self;
 import zedly.zbot.ClientSettings;
 import zedly.zbot.Location;
 import zedly.zbot.ServerConnection;
+import zedly.zbot.ai.Control;
 import zedly.zbot.entity.Entity;
 import zedly.zbot.entity.Player;
 import zedly.zbot.environment.Environment;

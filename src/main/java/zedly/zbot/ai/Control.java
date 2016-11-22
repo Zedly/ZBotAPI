@@ -30,41 +30,41 @@ public interface Control {
 
     void clickBlock(int x, int y, int z) throws InterruptedException;
 
-    void placeBlock(Location loc, BlockFace bf);
+    void placeBlock(Location loc, BlockFace bf) throws InterruptedException;
 
-    void placeBlock(int x, int y, int z, BlockFace bf);
+    void placeBlock(int x, int y, int z, BlockFace bf) throws InterruptedException;
 
-    void interact(Entity ent);
+    void interact(Entity ent) throws InterruptedException;
 
-    void attack(Entity ent);
+    void attack(Entity ent) throws InterruptedException;
 
-    void sneak(boolean sneak);
+    void sneak(boolean sneak) throws InterruptedException;
 
-    void sprint(boolean sprint);
+    void sprint(boolean sprint) throws InterruptedException;
 
-    void clickSlot(int slotId);
+    void clickSlot(int slotId) throws InterruptedException;
 
-    void clickSlot(Inventory inv, int slotId);
+    void clickSlot(Inventory inv, int slotId) throws InterruptedException;
 
     void tick() throws InterruptedException;
 
     void tick(int ticks) throws InterruptedException;
 
-    void closeWindow();
+    void closeWindow() throws InterruptedException;
 
-    void performAction(int action);
+    void performAction(int action) throws InterruptedException;
 
-    void respawn();
+    void respawn() throws InterruptedException;
 
-    void selectSlot(int i);
+    void selectSlot(int i) throws InterruptedException;
 
-    void sendChat(String message);
+    void sendChat(String message) throws InterruptedException;
 
-    void setAbilities(int abilities);
+    void setAbilities(int abilities) throws InterruptedException;
 
-    void swingArm(boolean leftHand);
+    void swingArm(boolean leftHand) throws InterruptedException;
 
-    void useItem(boolean leftHand);
+    void useItem(boolean leftHand) throws InterruptedException;
 
-    void writeToSign(Location loc, String line1, String line2, String line3, String line4);
+    void writeToSign(Location loc, String line1, String line2, String line3, String line4) throws InterruptedException;
 }
