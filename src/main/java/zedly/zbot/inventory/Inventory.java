@@ -4,11 +4,19 @@ public interface Inventory {
 
     ItemStack getSlot(int i);
 
+    @Deprecated
     int getSelectedSlot();
 
+    @Deprecated
     ItemStack getItemInHand();
-
+    
+    @Deprecated
     ItemStack getItemOnCursor();
 
-    void clickSlot(int slot, int mode, int action);
+    void click(int slot, int mode, int action);
+    
+    int internalSlot(int slot);
+    
+    int hotbarSlot(int offset);
+    
 }
