@@ -1,4 +1,4 @@
-package zedly.zbot.inventory;
+package org.bukkit;
 
 /**
  * An enum of all material IDs accepted by the official server and client
