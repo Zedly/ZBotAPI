@@ -41,9 +41,11 @@ public abstract class ZBotPlugin {
         return new File("plugins/" + getName());
     }
 
+    public void createDataFolder() {
+        getDataFolder().mkdir();
+    }
+
     public void reloadConfig() {
-        File dataFolder = getDataFolder();
-        dataFolder.mkdir();
         File file = new File(getDataFolder(), "config.yml");
         if (file.exists()) {
             config = YamlConfiguration.read(file);
