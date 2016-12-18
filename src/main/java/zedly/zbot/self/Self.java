@@ -70,6 +70,8 @@ public interface Self extends Player {
     int scheduleSyncDelayedTask(ZBotPlugin plugin, Runnable r, long delay);
 
     int scheduleSyncRepeatingTask(ZBotPlugin plugin, Runnable r, long delay, long interval);
+    
+    int scheduleSyncRepeatingTask(ZBotPlugin plugin, Runnable r, long interval);
 
     void selectSlot(int i);
 
