@@ -3,13 +3,14 @@ package zedly.zbot.self;
 import zedly.zbot.ClientSettings;
 import zedly.zbot.Location;
 import zedly.zbot.ServerConnection;
-import zedly.zbot.ai.Control;
 import zedly.zbot.entity.Entity;
 import zedly.zbot.entity.Player;
 import zedly.zbot.environment.Environment;
 import zedly.zbot.event.Listener;
 import zedly.zbot.inventory.Inventory;
 import zedly.zbot.plugin.ZBotPlugin;
+import zedly.zbot.ai.BlockingControl;
+import zedly.zbot.environment.BlockFace;
 
 public interface Self extends Player {
 
@@ -47,9 +48,9 @@ public interface Self extends Player {
 
     void performAction(int action);
 
-    void placeBlock(int x, int y, int z);
+    void placeBlock(int x, int y, int z, BlockFace face);
 
-    void placeBlock(Location loc);
+    void placeBlock(Location loc, BlockFace face);
 
     void breakBlock(int x, int y, int z);
 

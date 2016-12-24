@@ -1,6 +1,6 @@
 package zedly.zbot.inventory;
 
-import zedly.zbot.block.Material;
+import org.bukkit.Material;
 import net.minecraft.server.NBTBase;
 
 public interface ItemStack {
@@ -9,7 +9,7 @@ public interface ItemStack {
 
     int getTypeId();
 
-    short getDamageValue();
+    short getData();
 
     NBTBase getNbt();
 

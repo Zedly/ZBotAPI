@@ -5,7 +5,6 @@ import zedly.zbot.entity.Entity;
 
 import java.util.UUID;
 import zedly.zbot.Location;
-import zedly.zbot.block.Block;
 
 public interface Environment {
 

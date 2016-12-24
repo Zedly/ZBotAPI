@@ -1,5 +1,7 @@
 package org.bukkit;
 
+import java.util.HashMap;
+
 /**
  * An enum of all material IDs accepted by the official server and client
  */
@@ -453,8 +455,9 @@ public enum Material {
     RECORD_12(2267, 1),
     ;
 
+    private static final HashMap<Integer, Material> byId = new HashMap<>();
+
     private final int id;
-    private static Material[] byId = new Material[383];
     private final int maxStack;
     private final short durability;
 
@@ -558,12 +561,10 @@ public enum Material {
      *
      * @param id ID of the material to get
      * @return Material if found, or null
-     * @deprecated Magic value
      */
-    @Deprecated
     public static Material getMaterial(final int id) {
-        if (byId.length > id && id >= 0) {
-            return byId[id];
+        if (byId.containsKey(id)) {
+            return byId.get(id);
         } else {
             return null;
         }
@@ -1073,6 +1074,12 @@ public enum Material {
                 return true;
             default:
                 return false;
+        }
+    }
+    
+    static {
+        for(Material mat : values()) {
+            byId.put(mat.id, mat);
         }
     }
 }

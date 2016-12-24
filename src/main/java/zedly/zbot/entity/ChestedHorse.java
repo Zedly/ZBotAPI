@@ -9,10 +9,8 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface Horse extends AbstractHorse {
+public interface ChestedHorse extends AbstractHorse {
     
-    int getVariant();
-    
-    int getArmor();
+    boolean hasChest();
     
 }

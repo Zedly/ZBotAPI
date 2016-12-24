@@ -1,6 +1,6 @@
 package zedly.zbot.event.block;
 
-import zedly.zbot.block.Material;
+import org.bukkit.Material;
 import zedly.zbot.Location;
 import zedly.zbot.event.Event;
 
@@ -21,7 +21,7 @@ public class BlockChangeEvent extends Event {
     }
     
     public Material getType() {
-        return Material.fromTypeId(typeId);
+        return Material.getMaterial(typeId);
     }
 
     public int getTypeId() {
