@@ -4,13 +4,13 @@ import zedly.zbot.event.Event;
 
 public class EntityArrowHitEvent extends Event {
 
-    private float value;
+    private double value;
 
-    public EntityArrowHitEvent(float value) {
+    public EntityArrowHitEvent(double value) {
         this.value = value;
     }
 
-    public float getValue() {
+    public double getValue() {
         return value;
     }
 }

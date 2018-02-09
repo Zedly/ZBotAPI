@@ -2,13 +2,13 @@ package zedly.zbot.event;
 
 public class ChangeGamemodeEvent extends Event {
 
-    private float value;
+    private double value;
 
-    public ChangeGamemodeEvent(float value) {
+    public ChangeGamemodeEvent(double value) {
         this.value = value;
     }
 
-    public float getValue() {
+    public double getValue() {
         return value;
     }
 }

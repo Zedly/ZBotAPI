@@ -16,10 +16,10 @@ public class SoundEffectEvent extends Event {
     private final int x;
     private final int y;
     private final int z;
-    private final float volume;
-    private final float pitch;
+    private final double volume;
+    private final double pitch;
 
-    public SoundEffectEvent(int soundId, int category, int x, int y, int z, float volume, float pitch) {
+    public SoundEffectEvent(int soundId, int category, int x, int y, int z, double volume, double pitch) {
         this.soundId = soundId;
         this.category = category;
         this.x = x;
@@ -67,14 +67,14 @@ public class SoundEffectEvent extends Event {
     /**
      * @return the volume
      */
-    public float getVolume() {
+    public double getVolume() {
         return volume;
     }
 
     /**
      * @return the pitch
      */
-    public float getPitch() {
+    public double getPitch() {
         return pitch;
     }
 

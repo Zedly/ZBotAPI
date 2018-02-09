@@ -1,16 +1,14 @@
 package zedly.zbot.event;
 
-public class KeepAliveEvent extends Event
-{
-	private int keepAliveId;
+public class KeepAliveEvent extends Event {
 
-	public KeepAliveEvent(int keepAliveId)
-	{
-		this.keepAliveId = keepAliveId;
-	}
+    private long keepAliveId;
 
-	public int getKeepAliveId()
-	{
-		return keepAliveId;
-	}
+    public KeepAliveEvent(long keepAliveId) {
+        this.keepAliveId = keepAliveId;
+    }
+
+    public long getKeepAliveId() {
+        return keepAliveId;
+    }
 }

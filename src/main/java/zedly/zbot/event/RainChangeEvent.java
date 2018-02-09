@@ -1,23 +1,20 @@
 package zedly.zbot.event;
 
-public class RainChangeEvent extends Event
-{
-	boolean raining;
-	float   value;
+public class RainChangeEvent extends Event {
 
-	public RainChangeEvent(boolean raining, float value)
-	{
-		this.raining = raining;
-		this.value = value;
-	}
+    boolean raining;
+    double value;
 
-	public boolean isRaining()
-	{
-		return raining;
-	}
+    public RainChangeEvent(boolean raining, double value) {
+        this.raining = raining;
+        this.value = value;
+    }
 
-	public float getValue()
-	{
-		return value;
-	}
+    public boolean isRaining() {
+        return raining;
+    }
+
+    public double getValue() {
+        return value;
+    }
 }
