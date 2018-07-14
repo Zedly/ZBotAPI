@@ -72,6 +72,15 @@ public class YamlConfiguration {
         }
     }
     
+    public double getDouble(String path, double defaultValue) {
+        Object value = get(path);
+        if (value instanceof Double) {
+            return (double) value;
+        } else {
+            return defaultValue;
+        }
+    }
+    
     public int getInt(String path, int defaultValue) {
         Object value = get(path);
         if (value instanceof Integer) {
