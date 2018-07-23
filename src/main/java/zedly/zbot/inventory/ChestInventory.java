@@ -9,6 +9,6 @@ package zedly.zbot.inventory;
  *
  * @author Dennis
  */
-public interface ChestInventory extends Inventory {
+public interface ChestInventory extends ExternalInventory {
     
 }

@@ -9,9 +9,18 @@ package zedly.zbot.inventory;
  *
  * @author Dennis
  */
-public interface FurnaceInventory extends Inventory {
+public interface FurnaceInventory extends ExternalInventory {
+
+    public static final int FUEL_SLOT = 1;
+    public static final int SMELT_SLOT = 0;
+    public static final int OUTPUT_SLOT = 2;
     
-    
-    
-    
+    public int getMaxBurnTime();
+
+    public int getRemainingBurnTime();
+
+    public int getMaxProgress();
+
+    public int getProgress();
+
 }

@@ -24,7 +24,7 @@ public class NBTTagByteArray extends NBTBase
     /**
      * Write the actual data contents of the tag, implemented in NBT extension classes
      */
-    void write(DataOutput par1DataOutput) throws IOException
+    public void write(DataOutput par1DataOutput) throws IOException
     {
         par1DataOutput.writeInt(this.byteArray.length);
         par1DataOutput.write(this.byteArray);
@@ -33,7 +33,7 @@ public class NBTTagByteArray extends NBTBase
     /**
      * Read the actual data contents of the tag, implemented in NBT extension classes
      */
-    void load(DataInput par1DataInput) throws IOException
+    public void load(DataInput par1DataInput) throws IOException
     {
         int var2 = par1DataInput.readInt();
         this.byteArray = new byte[var2];

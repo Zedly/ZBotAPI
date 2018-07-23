@@ -24,7 +24,7 @@ public class NBTTagIntArray extends NBTBase
     /**
      * Write the actual data contents of the tag, implemented in NBT extension classes
      */
-    void write(DataOutput par1DataOutput) throws IOException
+    public void write(DataOutput par1DataOutput) throws IOException
     {
         par1DataOutput.writeInt(this.intArray.length);
 
@@ -37,7 +37,7 @@ public class NBTTagIntArray extends NBTBase
     /**
      * Read the actual data contents of the tag, implemented in NBT extension classes
      */
-    void load(DataInput par1DataInput) throws IOException
+    public void load(DataInput par1DataInput) throws IOException
     {
         int var2 = par1DataInput.readInt();
         this.intArray = new int[var2];

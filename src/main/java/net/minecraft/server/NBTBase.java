@@ -16,13 +16,13 @@ public abstract class NBTBase {
      * Write the actual data contents of the tag, implemented in NBT extension
      * classes
      */
-    abstract void write(DataOutput var1) throws IOException;
+    public abstract void write(DataOutput var1) throws IOException;
 
     /**
      * Read the actual data contents of the tag, implemented in NBT extension
      * classes
      */
-    abstract void load(DataInput var1) throws IOException;
+    public abstract void load(DataInput var1) throws IOException;
 
     /**
      * Gets the type byte for the tag.

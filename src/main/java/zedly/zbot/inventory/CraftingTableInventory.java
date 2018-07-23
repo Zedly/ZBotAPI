@@ -9,6 +9,6 @@ package zedly.zbot.inventory;
  *
  * @author Dennis
  */
-public interface CraftingTableInventory extends Inventory {
+public interface CraftingTableInventory extends ExternalInventory {
     
 }

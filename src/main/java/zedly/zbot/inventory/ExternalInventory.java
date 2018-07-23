@@ -5,16 +5,12 @@
  */
 package zedly.zbot.inventory;
 
-import java.util.function.Predicate;
-
 /**
  *
  * @author Dennis
  */
-public interface ExternalInventory {
+public interface ExternalInventory extends Inventory {
     
-    int takeItems(Predicate<ItemStack> filter, int maxAmount);
-    
-    int storeItems(Predicate<ItemStack> filter, int maxAmount);
+    public String getTitle();
     
 }

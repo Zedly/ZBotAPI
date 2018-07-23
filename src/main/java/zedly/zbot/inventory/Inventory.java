@@ -1,9 +1,16 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package zedly.zbot.inventory;
 
+/**
+ *
+ * @author Dennis
+ */
 public interface Inventory {
-
-    ItemStack getSlot(int i);
-
+    
     @Deprecated
     int getSelectedSlot();
 
@@ -12,11 +19,13 @@ public interface Inventory {
     
     @Deprecated
     ItemStack getItemOnCursor();
-
-    void click(int slot, int mode, int action);
     
-    int internalSlot(int slot);
+    ItemStack getSlot(int i);
     
-    int hotbarSlot(int offset);
+    int size();
+    
+    boolean isOpen();
+    
+    void click(int slot, int mode, int button);
     
 }
