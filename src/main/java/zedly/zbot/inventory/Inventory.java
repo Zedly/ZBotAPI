@@ -22,7 +22,11 @@ public interface Inventory {
     
     ItemStack getSlot(int i);
     
+    ItemStack getHotbarSlot(int i);
+    
     int size();
+    
+    int getStaticOffset();
     
     boolean isOpen();
     
