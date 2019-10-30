@@ -20,12 +20,12 @@ public interface AbstractHorse extends Animal
 	/**
 	 * @return whether this horse has a chest (donkeys only).
 	 */
-	boolean hasChest();
+	boolean isEating();
 
 	/**
 	 * @return whether this horse has been bred.
 	 */
-	boolean isBred();
+	boolean hasBred();
 	
 	/**
 	 * @return whether this horse is rearing (on its hind legs; doing a wheelie).

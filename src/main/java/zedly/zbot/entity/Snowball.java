@@ -9,6 +9,6 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface Snowball extends Projectile {
+public interface Snowball extends ItemedThrowable {
     
 }

@@ -129,6 +129,9 @@ public abstract class NBTBase {
             case 11:
                 return new NBTTagIntArray(par1Str);
 
+            case 12:
+                return new NBTTagLongArray(par1Str);
+
             default:
                 return null;
         }

@@ -1,19 +1,14 @@
 package zedly.zbot.entity;
 
 import org.bukkit.Material;
+import zedly.zbot.Location;
 
 /**
  * Represents a falling block.
  */
-public interface FallingBlock extends Entity {
+public interface FallingBlock extends Object {
 
-    /**
-     * @return the block type of this falling block.
-     */
+    Location getSpawnPosition();
+    
     Material getBlockType();
-
-    /**
-     * @return the block data of this falling block.
-     */
-    int getBlockData();
 }

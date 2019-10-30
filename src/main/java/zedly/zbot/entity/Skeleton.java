@@ -3,10 +3,6 @@ package zedly.zbot.entity;
 /**
  * Represents a skeleton.
  */
-public interface Skeleton extends Monster
+public interface Skeleton extends AbstractSkeleton
 {
-	/**
-	 * @return whether this skeleton is swinging its arms.
-	 */
-	boolean isSwingingArms();
 }

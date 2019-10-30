@@ -9,6 +9,6 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface EyeOfEnderSignal extends Projectile {
+public interface EyeOfEnderSignal extends ItemedThrowable {
     
 }

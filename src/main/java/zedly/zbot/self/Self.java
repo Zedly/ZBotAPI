@@ -33,7 +33,7 @@ public interface Self extends Player {
 
     @Override
     Location getLocation();
-
+    
     void interactWithEntity(Entity ent, boolean leftHand);
 
     void interactWithEntity(Entity ent, Location loc, boolean leftHand);

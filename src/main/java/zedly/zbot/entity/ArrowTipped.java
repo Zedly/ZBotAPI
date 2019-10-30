@@ -5,7 +5,7 @@
  */
 package zedly.zbot.entity;
 
-import zedly.zbot.WoolColor;
+import zedly.zbot.DyeColor;
 
 /**
  *
@@ -13,6 +13,6 @@ import zedly.zbot.WoolColor;
  */
 public interface ArrowTipped extends Arrow {
     
-    WoolColor getColor();
+    DyeColor getColor();
     
 }

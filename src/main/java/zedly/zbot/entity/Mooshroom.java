@@ -11,4 +11,6 @@ package zedly.zbot.entity;
  */
 public interface Mooshroom extends Cow {
     
+    String getCanonicalType();
+    
 }

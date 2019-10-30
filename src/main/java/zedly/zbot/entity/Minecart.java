@@ -5,7 +5,7 @@ import zedly.zbot.inventory.ItemStack;
 /**
  * Represents a minecart.
  */
-public interface Minecart extends Entity
+public interface Minecart extends Object
 {
 	/**
 	 * @return the amount of shaking this minecart currently has

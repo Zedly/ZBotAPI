@@ -11,8 +11,6 @@ public interface ItemStack {
 
     int getTypeId();
 
-    short getData();
-
     NBTBase getNbt();
     
     Map<Enchantment, Integer> getEnchantments();

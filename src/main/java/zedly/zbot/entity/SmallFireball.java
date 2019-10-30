@@ -9,6 +9,6 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface SmallFireball extends Projectile {
+public interface SmallFireball extends ItemedFireball  {
     
 }

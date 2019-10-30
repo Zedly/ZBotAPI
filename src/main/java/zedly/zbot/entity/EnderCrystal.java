@@ -6,7 +6,7 @@ import zedly.zbot.Location;
  * Represents an ender crystal, found most commonly on end
  * towers.
  */
-public interface EnderCrystal extends Entity
+public interface EnderCrystal extends Object
 {
 	/**
 	 * @return the target of the beam from this ender crystal.
@@ -17,4 +17,10 @@ public interface EnderCrystal extends Entity
 	 * @return whether this ender crystal has a target.
 	 */
 	boolean hasBeamTarget();
+
+
+	/**
+	 * @return whether this ender crystal has a target.
+	 */
+	boolean isBottomVisible();
 }

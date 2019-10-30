@@ -1,6 +1,7 @@
 package zedly.zbot.entity;
 
 import java.util.UUID;
+import net.minecraft.server.NBTBase;
 
 /**
  * Represents a player.
@@ -37,4 +38,15 @@ public interface Player extends LivingEntity
 	 * @return whether this player is left handed (in game obviously).
 	 */
 	boolean isLeftHanded();
+
+	/**
+	 * @return whether this player is left handed (in game obviously).
+	 */
+	NBTBase getLeftShoulderEntity();
+        
+        	/**
+	 * @return whether this player is left handed (in game obviously).
+	 */
+	NBTBase getRightShoulderEntity();
+
 }

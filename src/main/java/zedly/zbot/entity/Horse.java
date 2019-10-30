@@ -13,6 +13,4 @@ public interface Horse extends AbstractHorse {
     
     int getVariant();
     
-    int getArmor();
-    
 }

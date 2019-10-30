@@ -9,6 +9,6 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface ThrownEgg extends Projectile {
+public interface ThrownEgg extends ItemedThrowable {
     
 }

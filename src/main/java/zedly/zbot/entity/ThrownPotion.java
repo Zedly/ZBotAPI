@@ -5,7 +5,7 @@ import zedly.zbot.inventory.ItemStack;
 /**
  * Represents a potion.
  */
-public interface ThrownPotion extends Entity
+public interface ThrownPotion extends Throwable
 {
 	/**
 	 * @return the item stack this potion came from.
