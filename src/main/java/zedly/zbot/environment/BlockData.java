@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package zedly.zbot.entity;
+package zedly.zbot.environment;
+
+import zedly.zbot.Material;
 
 /**
  *
  * @author Dennis
  */
-public interface AbstractSkeleton extends Monster {
+public interface BlockData {
     
-    boolean isSwingingArms();
+    Material getType();
     
 }

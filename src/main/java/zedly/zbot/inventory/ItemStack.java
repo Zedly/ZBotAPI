@@ -2,14 +2,12 @@ package zedly.zbot.inventory;
 
 import java.util.List;
 import java.util.Map;
-import org.bukkit.Material;
 import net.minecraft.server.NBTBase;
+import zedly.zbot.Material;
 
 public interface ItemStack {
 
     Material getType();
-
-    int getTypeId();
 
     NBTBase getNbt();
     
@@ -25,5 +23,5 @@ public interface ItemStack {
     
     boolean hasDisplayName();
     
-    byte getAmount();
+    int getAmount();
 }

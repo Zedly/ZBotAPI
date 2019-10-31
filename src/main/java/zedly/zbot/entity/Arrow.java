@@ -14,7 +14,7 @@ public interface Arrow extends Object {
     
     boolean isNoClip();
     
-    UUID getShooter();
+    int getShooter();
     
     int getPiercingLevel();
 }

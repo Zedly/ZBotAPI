@@ -8,7 +8,7 @@ public interface AreaEffectCloud extends Object
 	/**
 	 * @return the radius of the effect.
 	 */
-	float getRadius();
+	double getRadius();
 
 	/**
 	 * @return the colour of particles used in the effect.

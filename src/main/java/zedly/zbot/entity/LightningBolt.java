@@ -9,8 +9,6 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface AbstractSkeleton extends Monster {
-    
-    boolean isSwingingArms();
+public interface LightningBolt extends Object {
     
 }

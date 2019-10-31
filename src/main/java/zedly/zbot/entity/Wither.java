@@ -3,7 +3,7 @@ package zedly.zbot.entity;
 /**
  * Represents a wither.
  */
-public interface Wither
+public interface Wither extends Monster
 {
 	/**
 	 * @return if the main head of this wither is targeting

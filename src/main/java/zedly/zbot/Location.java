@@ -34,8 +34,8 @@ public class Location {
 
     public Location(long l) {
         x = l >> 38;
-        y = (l >> 26) & 0xFFF;
-        z = l << 38 >> 38;
+        y = l & 0xFFF;
+        z = (l << 26) >> 38;
     }
 
     public double getPitchTo(Location l2) {

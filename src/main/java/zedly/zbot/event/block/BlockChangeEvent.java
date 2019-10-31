@@ -1,19 +1,18 @@
 package zedly.zbot.event.block;
 
-import org.bukkit.Material;
+import zedly.zbot.Material;
 import zedly.zbot.Location;
+import zedly.zbot.environment.BlockData;
 import zedly.zbot.event.Event;
 
 public class BlockChangeEvent extends Event {
 
     private final Location location;
-    private final int typeId;
-    private final int blockData;
+    private final BlockData newBlockData;
 
-    public BlockChangeEvent(Location location, int blockId) {
+    public BlockChangeEvent(Location location, BlockData newBlockData) {
         this.location = location;
-        this.typeId = blockId >> 4;
-        this.blockData = blockId & 0xF;
+        this.newBlockData = newBlockData;
     }
 
     public Location getLocation() {
@@ -21,14 +20,10 @@ public class BlockChangeEvent extends Event {
     }
     
     public Material getType() {
-        return Material.getMaterial(typeId);
-    }
-
-    public int getTypeId() {
-        return typeId;
+        return newBlockData.getType(); //return newBlockData.getType();
     }
     
-    public int getBlockData() {
-        return blockData;
+    public BlockData getBlockData() {
+        return newBlockData;
     }
 }

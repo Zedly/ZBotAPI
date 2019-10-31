@@ -5,7 +5,7 @@
  */
 package zedly.zbot.environment;
 
-import org.bukkit.Material;
+import zedly.zbot.Material;
 import zedly.zbot.Location;
 
 /**
@@ -16,9 +16,7 @@ public interface Block {
 
     Material getType();
 
-    int getTypeId();
-
-    int getData();
+    BlockData getData();
 
     int getBlockLight();
 

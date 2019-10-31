@@ -11,6 +11,4 @@ package zedly.zbot.entity;
  */
 public interface AbstractIllager extends RaidParticipant {
     
-    boolean hasTarget();
-    
 }

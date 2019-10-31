@@ -9,6 +9,6 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface ShulkerBullet extends Projectile, Object {
+public interface ShulkerBullet extends Projectile {
     
 }

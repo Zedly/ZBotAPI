@@ -1,6 +1,6 @@
 package zedly.zbot.entity;
 
-import org.bukkit.Material;
+import zedly.zbot.Material;
 import zedly.zbot.Location;
 
 /**
