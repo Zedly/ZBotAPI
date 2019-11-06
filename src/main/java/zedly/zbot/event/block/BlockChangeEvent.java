@@ -2,7 +2,7 @@ package zedly.zbot.event.block;
 
 import zedly.zbot.Material;
 import zedly.zbot.Location;
-import zedly.zbot.environment.BlockData;
+import zedly.zbot.block.data.BlockData;
 import zedly.zbot.event.Event;
 
 public class BlockChangeEvent extends Event {
@@ -20,7 +20,7 @@ public class BlockChangeEvent extends Event {
     }
     
     public Material getType() {
-        return newBlockData.getType(); //return newBlockData.getType();
+        return newBlockData.getMaterial();
     }
     
     public BlockData getBlockData() {

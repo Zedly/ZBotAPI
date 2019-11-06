@@ -10,7 +10,7 @@ import zedly.zbot.event.Listener;
 import zedly.zbot.inventory.Inventory;
 import zedly.zbot.plugin.ZBotPlugin;
 import zedly.zbot.ai.BlockingControl;
-import zedly.zbot.environment.BlockFace;
+import zedly.zbot.BlockFace;
 
 public interface Self extends Player {
 
@@ -31,15 +31,19 @@ public interface Self extends Player {
 
     ServerConnection getServerConnection();
 
+    int getXPLevels();
+
+    double getXPPercent();
+
     @Override
     Location getLocation();
-    
+
     void interactWithEntity(Entity ent, boolean leftHand);
 
     void interactWithEntity(Entity ent, Location loc, boolean leftHand);
 
     void lookAt(double yaw, double pitch);
-    
+
     void moveTo(double x, double y, double z);
 
     void moveTo(double x, double y, double z, double yaw, double pitch);
@@ -71,7 +75,7 @@ public interface Self extends Player {
     int scheduleSyncDelayedTask(ZBotPlugin plugin, Runnable r, long delay);
 
     int scheduleSyncRepeatingTask(ZBotPlugin plugin, Runnable r, long delay, long interval);
-    
+
     int scheduleSyncRepeatingTask(ZBotPlugin plugin, Runnable r, long interval);
 
     void selectSlot(int i);

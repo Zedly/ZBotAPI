@@ -24,38 +24,49 @@ public enum Enchantment {
     DEPTH_STRIDER(8, "Depth Strider", 3),
     FROST_WALKER(9, "Frost Walker", 2),
     CURSE_OF_BINDING(10, "Curse of Binding", 1),
-    SHARPNESS(16, "Sharpness", 5),
-    SMITE(17, "Smite", 5),
-    BANE_OF_ARTHROPODS(18, "Bane of Arthropods", 5),
-    KNOCKBACK(19, "Knockback", 2),
-    FIRE_ASPECT(20, "Fire Aspect", 2),
-    LOOTING(21, "Looting", 3),
-    SWEEPING_EDGE(22, "Sweeping Edge", 3),
-    EFFICIENCY(32, "Efficiency", 5),
-    SILK_TOUCH(33, "Silk Touch", 1),
-    UNBREAKING(34, "Unbreaking", 3),
-    FORTUNE(35, "Fortune", 3),
-    POWER(48, "Power", 5),
-    PUNCH(49, "Punch", 2),
-    FLAME(50, "Flame", 1),
-    INFINITY(51, "Infinity", 1),
-    LUCK_OF_THE_SEA(61, "Luck of the Sea", 3),
-    LURE(62, "Lure", 3),
-    LOYALTY(65, "Loyalty", 3),
-    IMPALING(66, "Impaling", 5),
-    RIPTIDE(67, "Riptide", 3),
-    CHANNELING(68, "Channeling", 1),
-    MENDING(70, "Mending", 1),
-    CURSE_OF_VANISHING(71, "Curse of Vanishing", 1);
+    SHARPNESS(11, "Sharpness", 5),
+    SMITE(12, "Smite", 5),
+    BANE_OF_ARTHROPODS(13, "Bane of Arthropods", 5),
+    KNOCKBACK(14, "Knockback", 2),
+    FIRE_ASPECT(15, "Fire Aspect", 2),
+    LOOTING(16, "Looting", 3),
+    SWEEPING(17, "Sweeping Edge", 3),
+    EFFICIENCY(18, "Efficiency", 5),
+    SILK_TOUCH(19, "Silk Touch", 1),
+    UNBREAKING(20, "Unbreaking", 3),
+    FORTUNE(21, "Fortune", 3),
+    POWER(22, "Power", 5),
+    PUNCH(23, "Punch", 2),
+    FLAME(24, "Flame", 1),
+    INFINITY(25, "Infinity", 1),
+    LUCK_OF_THE_SEA(26, "Luck of the Sea", 3),
+    LURE(27, "Lure", 3),
+    LOYALTY(28, "Loyalty", 3),
+    IMPALING(29, "Impaling", 5),
+    RIPTIDE(30, "Riptide", 3),
+    CHANNELING(31, "Channeling", 3),
+    MULTISHOT(32, "Multishot", 4),
+    QUICK_CHARGE(33, "Quick Charge", 4),
+    PIERCING(34, "Piercing", 4),
+    MENDING(35, "Mending", 1),
+    CURSE_OF_VANISHING(35, "Curse of Vanishing", 1);
 
     private static final HashMap<Integer, Enchantment> BY_ID = new HashMap<>();
-    
+
     private final int id;
     private final String name;
     private final int maxLevel;
-    
+
     public static Enchantment byId(int id) {
         return BY_ID.get(id);
+    }
+
+    public static Enchantment byCanonicalId(String canId) {
+        try {
+            return valueOf(canId.substring(canId.indexOf(":") + 1).toUpperCase());
+        } catch (IllegalArgumentException ex) {
+            return null;
+        }
     }
 
     private Enchantment(int id, String name, int maxLevel) {
@@ -63,23 +74,23 @@ public enum Enchantment {
         this.name = name;
         this.maxLevel = maxLevel;
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public int getId() {
         return id;
     }
-    
+
     public int getMaxLevel() {
         return maxLevel;
     }
 
     static {
-        for(Enchantment ench : Enchantment.values()) {
+        for (Enchantment ench : Enchantment.values()) {
             BY_ID.put(ench.getId(), ench);
         }
     }
-    
+
 }

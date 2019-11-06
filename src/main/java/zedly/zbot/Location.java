@@ -107,7 +107,11 @@ public class Location {
     }
 
     public long toLong() {
-        return ((long) getBlockX() & 0x3FFFFFF) << 38 | (((long) getBlockY() & 0xFFF) << 26) | ((long) getBlockZ() & 0x3FFFFFF);
+        
+        return ((long) getBlockX() & 0x3FFFFFF) << 38 | (((long) getBlockZ() & 0x3FFFFFF) << 12) | ((long) getBlockY() & 0xFFF);
+        
+        
+        
     }
     
     public Location center() {

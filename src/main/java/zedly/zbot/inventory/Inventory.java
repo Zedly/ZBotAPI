@@ -32,4 +32,6 @@ public interface Inventory {
     
     void click(int slot, int mode, int button);
     
+    boolean changed();
+    
 }

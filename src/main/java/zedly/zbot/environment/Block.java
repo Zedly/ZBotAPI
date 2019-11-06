@@ -5,8 +5,11 @@
  */
 package zedly.zbot.environment;
 
+import zedly.zbot.BlockFace;
 import zedly.zbot.Material;
 import zedly.zbot.Location;
+import zedly.zbot.block.Tile;
+import zedly.zbot.block.data.BlockData;
 
 /**
  *
@@ -17,6 +20,10 @@ public interface Block {
     Material getType();
 
     BlockData getData();
+    
+    boolean hasTile();
+    
+    Tile getTile();
 
     int getBlockLight();
 

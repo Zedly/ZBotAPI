@@ -7,7 +7,7 @@ package zedly.zbot.ai;
 
 import zedly.zbot.Location;
 import zedly.zbot.entity.Entity;
-import zedly.zbot.environment.BlockFace;
+import zedly.zbot.BlockFace;
 
 /**
  *
