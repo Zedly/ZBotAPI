@@ -28,4 +28,7 @@ public interface Trade {
     double getPriceMultiplier();
 
     int getDemand();
+    
+    boolean isEnabled();
+    
 }

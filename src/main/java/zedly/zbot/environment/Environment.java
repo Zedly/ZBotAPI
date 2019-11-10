@@ -13,6 +13,8 @@ public interface Environment {
     Entity getEntityById(int entityId);
 
     String getPlayerNameByUUID(UUID uuid);
+    
+    UUID getUUIDByPlayerName(String name);
 
     Block getBlockAt(int x, int y, int z);
 
