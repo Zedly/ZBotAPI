@@ -3,7 +3,7 @@ package zedly.zbot.entity;
 /**
  * Represents a fishing hook from a fishing rod.
  */
-public interface FishingHook extends Entity {
+public interface FishingHook extends Object {
 
 	/**
      * @return whether this fishing hook is hooked to an entity.

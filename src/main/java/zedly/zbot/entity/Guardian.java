@@ -11,11 +11,6 @@ public interface Guardian extends Monster
 	boolean isRetractingSpikes();
 
 	/**
-	 * @return whether this guardian is an elder guardian.
-	 */
-	boolean isElderly();
-
-	/**
 	 * @return whether this guardian is targeting an entity.
 	 */
 	boolean isTargeting();

@@ -9,6 +9,6 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface ExperienceBottle extends Projectile {
+public interface ExperienceBottle extends ItemedThrowable {
     
 }

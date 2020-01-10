@@ -6,6 +6,7 @@
 package zedly.zbot.entity;
 
 import java.util.UUID;
+import net.minecraft.server.NBTBase;
 import zedly.zbot.Direction;
 import zedly.zbot.Location;
 import zedly.zbot.inventory.ItemStack;
@@ -33,5 +34,7 @@ public interface EntityMeta {
     UUID asUUID();
     
     Location asLocation();
+    
+    NBTBase asNBT();
     
 }

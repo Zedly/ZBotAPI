@@ -28,7 +28,7 @@ public class NBTTagCompound extends NBTBase {
      * Write the actual data contents of the tag, implemented in NBT extension
      * classes
      */
-    void write(DataOutput par1DataOutput) throws IOException {
+    public void write(DataOutput par1DataOutput) throws IOException {
         Iterator var2 = this.tagMap.values().iterator();
 
         while (var2.hasNext()) {
@@ -43,7 +43,7 @@ public class NBTTagCompound extends NBTBase {
      * Read the actual data contents of the tag, implemented in NBT extension
      * classes
      */
-    void load(DataInput par1DataInput) throws IOException {
+    public void load(DataInput par1DataInput) throws IOException {
         this.tagMap.clear();
         NBTBase var2;
 

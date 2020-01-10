@@ -1,16 +1,14 @@
 package zedly.zbot.event;
 
-public class SkyFadeEvent extends Event
-{
-	public float value;
+public class SkyFadeEvent extends Event {
 
-	public SkyFadeEvent(float value)
-	{
-		this.value = value;
-	}
+    public double value;
 
-	public float getValue()
-	{
-		return value;
-	}
+    public SkyFadeEvent(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
 }

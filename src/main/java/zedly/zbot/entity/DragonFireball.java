@@ -9,6 +9,6 @@ package zedly.zbot.entity;
  *
  * @author Dennis
  */
-public interface DragonFireball extends Fireball {
+public interface DragonFireball extends AbstractFireball {
     
 }

@@ -1,30 +1,26 @@
 package zedly.zbot.event;
 
-public class HealthChangeEvent extends Event
-{
-	private float health;
-	private int food;
-	private float saturation;
+public class HealthChangeEvent extends Event {
 
-	public HealthChangeEvent(float health, int food, float saturation)
-	{
-		this.health = health;
-		this.food = food;
-		this.saturation = saturation;
-	}
+    private double health;
+    private int food;
+    private double saturation;
 
-	public float getHealth()
-	{
-		return health;
-	}
+    public HealthChangeEvent(double health, int food, double saturation) {
+        this.health = health;
+        this.food = food;
+        this.saturation = saturation;
+    }
 
-	public int getFood()
-	{
-		return food;
-	}
+    public double getHealth() {
+        return health;
+    }
 
-	public float getSaturation()
-	{
-		return saturation;
-	}
+    public int getFood() {
+        return food;
+    }
+
+    public double getSaturation() {
+        return saturation;
+    }
 }

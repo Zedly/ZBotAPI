@@ -3,43 +3,43 @@ package zedly.zbot.entity;
 /**
  * Represents a wither.
  */
-public interface Wither
+public interface Wither extends Monster
 {
 	/**
 	 * @return if the main head of this wither is targeting
 	 * anything.
 	 */
-	boolean isFirstHeadTargeting();
+	boolean isCenterHeadTargeting();
 
 	/**
 	 * @return the entity ID of the entity this wither's main
 	 * head is targeting.
 	 */
-	int getFirstHeadTargetId();
+	int getCenterHeadTargetId();
 
 	/**
 	 * @return if the second head of this wither is targeting
 	 * anything.
 	 */
-	boolean isSecondHeadTargeting();
+	boolean isLeftHeadTargeting();
 
 	/**
 	 * @return the entity ID of the entity this wither's second
 	 * head is targeting.
 	 */
-	int getSecondHeadTargetId();
+	int getLeftHeadTargetId();
 
 	/**
 	 * @return the entity ID of the entity this wither's third
 	 * head is targeting.
 	 */
-	boolean isThirdHeadTargeting();
+	boolean isRightHeadTargeting();
 
 	/**
 	 * @return the entity ID of the entity this wither's third
 	 * head is targeting.
 	 */
-	int getThirdHeadTargetId();
+	int getRightHeadTargetId();
 
 	/**
 	 * @return all of the entity IDs of the targets of this

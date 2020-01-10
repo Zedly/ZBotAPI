@@ -5,7 +5,6 @@ import zedly.zbot.entity.Entity;
 
 import java.util.UUID;
 import zedly.zbot.Location;
-import zedly.zbot.block.Block;
 
 public interface Environment {
 
@@ -14,6 +13,8 @@ public interface Environment {
     Entity getEntityById(int entityId);
 
     String getPlayerNameByUUID(UUID uuid);
+    
+    UUID getUUIDByPlayerName(String name);
 
     Block getBlockAt(int x, int y, int z);
 

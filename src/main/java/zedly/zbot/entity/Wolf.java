@@ -1,6 +1,6 @@
 package zedly.zbot.entity;
 
-import zedly.zbot.WoolColor;
+import zedly.zbot.DyeColor;
 
 /**
  * Represents a wolf.
@@ -20,5 +20,5 @@ public interface Wolf extends Tameable {
 	/**
      * @return the colour of this wolf's collar.
      */
-    WoolColor getCollarColor();
+    DyeColor getCollarColor();
 }

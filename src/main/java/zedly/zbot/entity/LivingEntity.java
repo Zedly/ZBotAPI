@@ -1,37 +1,45 @@
 package zedly.zbot.entity;
 
+import zedly.zbot.Location;
+
 /**
  * Represents any living entity in the game.
  */
-public interface LivingEntity extends Entity
-{
-	/**
-	 * @return whether this entity's left hand is in use.
-	 */
-	boolean isLeftHandActive();
+public interface LivingEntity extends Entity {
 
-	/**
-	 * @return whether this entity's main hand is in use.
-	 */
-	boolean isHandActive();
+    /**
+     * @return whether this entity's left hand is in use.
+     */
+    boolean isLeftHandActive();
 
-	/**
-	 * @return the health of this entity.
-	 */
-	float getHealth();
+    /**
+     * @return whether this entity's main hand is in use.
+     */
+    boolean isHandActive();
 
-	/**
-	 * @return the potion effect colour of this entity.
-	 */
-	int getPotionEffectColor();
+    /**
+     * @return the health of this entity.
+     */
+    float getHealth();
 
-	/**
-	 * @return whether a potion effect on this entity is ambient.
-	 */
-	boolean isPotionEffectAmbient();
+    /**
+     * @return the potion effect colour of this entity.
+     */
+    int getPotionEffectColor();
 
-	/**
-	 * @return the number of arrows stuck to this entity.
-	 */
-	int getArrowsStuck();
+    /**
+     * @return whether a potion effect on this entity is ambient.
+     */
+    boolean isPotionEffectAmbient();
+
+    /**
+     * @return the number of arrows stuck to this entity.
+     */
+    int getArrowsStuck();
+
+    default boolean hasBedLocation() {
+        return getBedLocation() != null;
+    }
+
+    Location getBedLocation();
 }

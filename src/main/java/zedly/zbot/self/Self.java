@@ -3,13 +3,14 @@ package zedly.zbot.self;
 import zedly.zbot.ClientSettings;
 import zedly.zbot.Location;
 import zedly.zbot.ServerConnection;
-import zedly.zbot.ai.Control;
 import zedly.zbot.entity.Entity;
 import zedly.zbot.entity.Player;
 import zedly.zbot.environment.Environment;
 import zedly.zbot.event.Listener;
 import zedly.zbot.inventory.Inventory;
 import zedly.zbot.plugin.ZBotPlugin;
+import zedly.zbot.ai.BlockingControl;
+import zedly.zbot.BlockFace;
 
 public interface Self extends Player {
 
@@ -30,6 +31,10 @@ public interface Self extends Player {
 
     ServerConnection getServerConnection();
 
+    int getXPLevels();
+
+    double getXPPercent();
+
     @Override
     Location getLocation();
 
@@ -38,7 +43,7 @@ public interface Self extends Player {
     void interactWithEntity(Entity ent, Location loc, boolean leftHand);
 
     void lookAt(double yaw, double pitch);
-    
+
     void moveTo(double x, double y, double z);
 
     void moveTo(double x, double y, double z, double yaw, double pitch);
@@ -47,9 +52,9 @@ public interface Self extends Player {
 
     void performAction(int action);
 
-    void placeBlock(int x, int y, int z);
+    void placeBlock(int x, int y, int z, BlockFace face);
 
-    void placeBlock(Location loc);
+    void placeBlock(Location loc, BlockFace face);
 
     void breakBlock(int x, int y, int z);
 
@@ -70,6 +75,8 @@ public interface Self extends Player {
     int scheduleSyncDelayedTask(ZBotPlugin plugin, Runnable r, long delay);
 
     int scheduleSyncRepeatingTask(ZBotPlugin plugin, Runnable r, long delay, long interval);
+
+    int scheduleSyncRepeatingTask(ZBotPlugin plugin, Runnable r, long interval);
 
     void selectSlot(int i);
 

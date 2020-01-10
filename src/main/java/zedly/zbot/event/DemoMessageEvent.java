@@ -1,16 +1,14 @@
 package zedly.zbot.event;
 
-public class DemoMessageEvent extends Event
-{
-	private float value;
+public class DemoMessageEvent extends Event {
 
-	public DemoMessageEvent(float value)
-	{
-		this.value = value;
-	}
+    private double value;
 
-	public float getValue()
-	{
-		return value;
-	}
+    public DemoMessageEvent(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
 }

@@ -3,10 +3,7 @@ package zedly.zbot.entity;
 /**
  * Represents an ocelot (or cat).
  */
-public interface Ocelot extends Tameable
+public interface Ocelot extends Ageable
 {
-	/**
-	 * @return the type of this ocelot (its style).
-	 */
-	int getOcelotType();
+	boolean isTrusting();
 }

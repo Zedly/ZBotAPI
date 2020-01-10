@@ -3,7 +3,7 @@ package zedly.zbot.entity;
 /**
  * Represents an armour stand.
  */
-public interface ArmorStand extends LivingEntity
+public interface ArmorStand extends LivingEntity, Object
 {
 	/**
 	 * @return whether this armour stand is small.
@@ -13,7 +13,7 @@ public interface ArmorStand extends LivingEntity
 	/**
 	 * @return whether this armour stand has gravity.
 	 */
-	boolean hasGravity();
+	//boolean hasGravity();
 
 	/**
 	 * @return whether this armour stand has arms.

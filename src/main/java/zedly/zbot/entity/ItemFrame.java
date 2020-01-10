@@ -5,7 +5,7 @@ import zedly.zbot.inventory.ItemStack;
 /**
  * Represents an item frame (a frame for items).
  */
-public interface ItemFrame extends Hanging {
+public interface ItemFrame extends Hanging, Object {
 
     /**
      * @return the item stack inside this item frame.

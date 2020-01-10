@@ -5,6 +5,8 @@
  */
 package zedly.zbot.event;
 
+import zedly.zbot.Location;
+
 /**
  *
  * @author Dennis
@@ -16,11 +18,11 @@ public class NamedSoundEffectEvent extends Event {
     private final int x;
     private final int y;
     private final int z;
-    private final float volume;
-    private final float pitch;
+    private final double volume;
+    private final double pitch;
     
     
-    public NamedSoundEffectEvent(String soundName, int soundCategory, int x, int y, int z, float volume, float pitch) {
+    public NamedSoundEffectEvent(String soundName, int soundCategory, int x, int y, int z, double volume, double pitch) {
         this.soundName = soundName;
         this.soundCategory = soundCategory;
         this.x = x;
@@ -68,14 +70,14 @@ public class NamedSoundEffectEvent extends Event {
     /**
      * @return the volume
      */
-    public float getVolume() {
+    public double getVolume() {
         return volume;
     }
 
     /**
      * @return the pitch
      */
-    public float getPitch() {
+    public double getPitch() {
         return pitch;
     }
     

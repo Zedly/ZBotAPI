@@ -5,8 +5,6 @@ package zedly.zbot;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 import zedly.zbot.util.CartesianVector;
 import zedly.zbot.util.Vector;
 
@@ -16,7 +14,7 @@ import zedly.zbot.util.Vector;
 public class Location {
 
     private double x, y, z, yaw, pitch;
-   
+
     public Location() {
     }
 
@@ -34,8 +32,8 @@ public class Location {
 
     public Location(long l) {
         x = l >> 38;
-        y = (l >> 26) & 0xFFF;
-        z = l << 38 >> 38;
+        y = l & 0xFFF;
+        z = (l << 26) >> 38;
     }
 
     public double getPitchTo(Location l2) {
@@ -107,17 +105,19 @@ public class Location {
     }
 
     public long toLong() {
-        return ((long) getBlockX() & 0x3FFFFFF) << 38 | (((long) getBlockY() & 0xFFF) << 26) | ((long) getBlockZ() & 0x3FFFFFF);
+
+        return ((long) getBlockX() & 0x3FFFFFF) << 38 | (((long) getBlockZ() & 0x3FFFFFF) << 12) | ((long) getBlockY() & 0xFFF);
+
     }
-    
+
     public Location center() {
         return new Location(getBlockX() + 0.5, getBlockY() + 0.5, getBlockZ() + 0.5, getYaw(), getPitch());
     }
-    
+
     public Location centerHorizontally() {
-        return new Location(getBlockX() + 0.5, getBlockY(), getBlockZ() + 0.5, getYaw(), getPitch());        
+        return new Location(getBlockX() + 0.5, getBlockY(), getBlockZ() + 0.5, getYaw(), getPitch());
     }
-    
+
     public Location withYawPitch(double yaw, double pitch) {
         return new Location(getX(), getY(), getZ(), yaw, pitch);
     }
@@ -129,6 +129,25 @@ public class Location {
 
     public String toString() {
         return "{" + x + ", " + y + ", " + z + " : " + yaw + "," + pitch + "}";
+    }
+
+    @Override
+    public int hashCode() {
+        return ((int) z & 0xFF) | (((int) y & 0xFF) << 8) | (((int) x & 0xff) << 16);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Location)) {
+            return false;
+        }
+        Location other = (Location) o;
+
+        return x == other.x
+                && y == other.y
+                && z == other.z
+                && yaw == other.yaw
+                && pitch == other.pitch;
     }
 
 }
