@@ -22,4 +22,6 @@ public interface Environment {
     
     int getDifficulty();
     
+    Location getSpawnPoint();
+    
 }
