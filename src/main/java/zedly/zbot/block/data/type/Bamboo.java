@@ -1,11 +1,11 @@
 package zedly.zbot.block.data.type;
 
-import zedly.zbot.block.data.Ageable;
+import zedly.zbot.block.data.AgeableBlock;
 
 /**
  * 'leaves' represents the size of the leaves on this bamboo block.
  */
-public interface Bamboo extends Ageable, Sapling {
+public interface Bamboo extends AgeableBlock, Sapling {
 
     /**
      * Gets the value of the 'leaves' property.
