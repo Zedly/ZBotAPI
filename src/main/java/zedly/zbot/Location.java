@@ -150,4 +150,12 @@ public class Location {
                 && pitch == other.pitch;
     }
 
+    public boolean equalsBlock(Location other) {
+        return (int) x == (int) other.x
+                && (int) y == (int) other.y
+                && (int) z == (int) other.z
+                && (int) yaw == (int) other.yaw
+                && (int) pitch == (int) other.pitch;
+    }
+
 }
