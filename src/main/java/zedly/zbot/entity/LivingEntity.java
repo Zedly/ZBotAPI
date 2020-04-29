@@ -1,6 +1,8 @@
 package zedly.zbot.entity;
 
+import java.util.Map;
 import zedly.zbot.Location;
+import zedly.zbot.PotionEffect;
 
 /**
  * Represents any living entity in the game.
@@ -27,6 +29,11 @@ public interface LivingEntity extends Entity {
      */
     int getPotionEffectColor();
 
+    /**
+     * @return The potion effects affecting this entity and their levels
+     */
+    Map<PotionEffect, Integer> getPotionEffects();
+    
     /**
      * @return whether a potion effect on this entity is ambient.
      */
