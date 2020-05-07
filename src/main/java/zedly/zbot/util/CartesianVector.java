@@ -146,4 +146,9 @@ public class CartesianVector extends Vector {
         return new SphericalVector(yaw, pitch, radius);
     }
 
+    @Override
+    public String toString() {
+        return "{CartesianVector x:" + x + " y: " + y + " z: " + z + "}";
+    }
+
 }

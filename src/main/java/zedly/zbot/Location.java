@@ -122,6 +122,18 @@ public class Location {
         return new Location(getX(), getY(), getZ(), yaw, pitch);
     }
 
+    public Location withYawPitch(Vector v) {
+        return withYawPitch(180 / Math.PI * v.getYaw(), 180 / Math.PI * v.getPitch());
+    }
+
+    public Location withYawPitchFrom(Location previous) {
+        return withYawPitch(previous.vectorTo(this));
+    }
+
+    public Location withYawPitchTo(Location next) {
+        return withYawPitch(vectorTo(next));
+    }
+
     @Override
     public Location clone() {
         return new Location(this.x, this.y, this.z, this.yaw, this.pitch);

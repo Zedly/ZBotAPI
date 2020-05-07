@@ -6085,5 +6085,9 @@ public enum Material {
             // </editor-fold>
         }
     }
+    
+    public boolean isWalkable() {
+        return this == LADDER || this == VINE || isSolid();
+    }
 
 }
