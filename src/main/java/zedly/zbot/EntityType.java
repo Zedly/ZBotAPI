@@ -15,7 +15,7 @@ public enum EntityType {
      * Spawn with {@link World#dropItem(Location, ItemStack)} or {@link
      * World#dropItemNaturally(Location, ItemStack)}
      */
-    DROPPED_ITEM("item", Item.class, 1, false),
+    ITEM("item", Item.class, 1, false),
     /**
      * An experience orb.
      */
@@ -43,7 +43,7 @@ public enum EntityType {
     /**
      * A leash attached to a fencepost.
      */
-    LEASH_HITCH("leash_knot", LeashKnot.class, 8),
+    LEASH_KNOT("leash_knot", LeashKnot.class, 8),
     /**
      * A painting on a wall.
      */
@@ -71,15 +71,15 @@ public enum EntityType {
     /**
      * An ender eye signal.
      */
-    ENDER_SIGNAL("eye_of_ender", EyeOfEnderSignal.class, 15),
+    EYE_OF_ENDER("eye_of_ender", EyeOfEnderSignal.class, 15),
     /**
      * A flying splash potion.
      */
-    SPLASH_POTION("potion", ThrownPotion.class, 16, false),
+    POTION("potion", ThrownPotion.class, 16, false),
     /**
      * A flying experience bottle.
      */
-    THROWN_EXP_BOTTLE("experience_bottle", ExperienceBottle.class, 17),
+    EXPERIENCE_BOTTLE("experience_bottle", ExperienceBottle.class, 17),
     /**
      * An item frame on a wall.
      */
@@ -91,7 +91,7 @@ public enum EntityType {
     /**
      * Primed TNT that is about to explode.
      */
-    PRIMED_TNT("tnt", PrimedTNT.class, 20),
+    TNT("tnt", PrimedTNT.class, 20),
     /**
      * A block that is going to or is about to fall.
      */
@@ -99,7 +99,7 @@ public enum EntityType {
     /**
      * Internal representation of a Firework once it has been launched.
      */
-    FIREWORK("firework_rocket", Firework.class, 22, false),
+    FIREWORK_ROCKET("firework_rocket", Firework.class, 22, false),
     /**
      * @see Husk
      */
@@ -163,7 +163,7 @@ public enum EntityType {
     /**
      * @see CommandMinecart
      */
-    MINECART_COMMAND("command_block_minecart", MinecartCommandBlock.class, 40),
+    COMMAND_BLOCK_MINECART("command_block_minecart", MinecartCommandBlock.class, 40),
     /**
      * A placed boat.
      */
@@ -175,23 +175,23 @@ public enum EntityType {
     /**
      * @see StorageMinecart
      */
-    MINECART_CHEST("chest_minecart", MinecartContainer.class, 43),
+    CHEST_MINECART("chest_minecart", MinecartContainer.class, 43),
     /**
      * @see PoweredMinecart
      */
-    MINECART_FURNACE("furnace_minecart", MinecartPowered.class, 44),
+    FURNACE_MINECART("furnace_minecart", MinecartPowered.class, 44),
     /**
      * @see ExplosiveMinecart
      */
-    MINECART_TNT("tnt_minecart", MinecartTNT.class, 45),
+    TNT_MINECART("tnt_minecart", MinecartTNT.class, 45),
     /**
      * @see HopperMinecart
      */
-    MINECART_HOPPER("hopper_minecart", MinecartHopper.class, 46),
+    HOPPER_MINECART("hopper_minecart", MinecartHopper.class, 46),
     /**
      * @see SpawnerMinecart
      */
-    MINECART_MOB_SPAWNER("spawner_minecart", MinecartSpawner.class, 47),
+    SPAWNER_MINECART("spawner_minecart", MinecartSpawner.class, 47),
     CREEPER("creeper", Creeper.class, 50),
     SKELETON("skeleton", Skeleton.class, 51),
     SPIDER("spider", Spider.class, 52),
@@ -199,7 +199,7 @@ public enum EntityType {
     ZOMBIE("zombie", Zombie.class, 54),
     SLIME("slime", Slime.class, 55),
     GHAST("ghast", Ghast.class, 56),
-    PIG_ZOMBIE("zombie_pigman", ZombiePig.class, 57),
+    ZOMBIE_PIGMAN("zombie_pigman", ZombiePig.class, 57),
     ENDERMAN("enderman", Enderman.class, 58),
     CAVE_SPIDER("cave_spider", CaveSpider.class, 59),
     SILVERFISH("silverfish", Silverfish.class, 60),
@@ -218,8 +218,8 @@ public enum EntityType {
     CHICKEN("chicken", Chicken.class, 93),
     SQUID("squid", Squid.class, 94),
     WOLF("wolf", Wolf.class, 95),
-    MUSHROOM_COW("mooshroom", Mooshroom.class, 96),
-    SNOWMAN("snow_golem", Snowman.class, 97),
+    MOOSHROOM("mooshroom", Mooshroom.class, 96),
+    SNOW_GOLEM("snow_golem", Snowman.class, 97),
     OCELOT("ocelot", Ocelot.class, 98),
     IRON_GOLEM("iron_golem", IronGolem.class, 99),
     HORSE("horse", Horse.class, 100),
@@ -229,7 +229,7 @@ public enum EntityType {
     LLAMA_SPIT("llama_spit", LlamaSpit.class, 104),
     PARROT("parrot", Parrot.class, 105),
     VILLAGER("villager", Villager.class, 120),
-    ENDER_CRYSTAL("end_crystal", EnderCrystal.class, 200),
+    END_CRYSTAL("end_crystal", EnderCrystal.class, 200),
     TURTLE("turtle", Turtle.class, -1),
     PHANTOM("phantom", Phantom.class, -1),
     TRIDENT("trident", Trident.class, -1),
@@ -244,18 +244,19 @@ public enum EntityType {
     PILLAGER("pillager", Pillager.class, -1),
     RAVAGER("ravager", Ravager.class, -1),
     TRADER_LLAMA("trader_llama", TraderLlama.class, -1),
+    BEE("bee", Bee.class, -1),
     WANDERING_TRADER("wandering_trader", WanderingTrader.class, -1),
     FOX("fox", Fox.class, -1),
     /**
      * A fishing line and bobber.
      */
-    FISHING_HOOK("fishing_bobber", FishingHook.class, -1, false),
+    FISHING_BOBBER("fishing_bobber", FishingHook.class, -1, false),
     /**
      * A bolt of lightning.
      * <p>
      * Spawn with {@link World#strikeLightning(Location)}.
      */
-    LIGHTNING("lightning_bolt", LightningBolt.class, -1, false),
+    LIGHTNING_BOLT("lightning_bolt", LightningBolt.class, -1, false),
     PLAYER("player", Player.class, -1, false),
     /**
      * An unknown entity without an Entity Class
@@ -282,17 +283,17 @@ public enum EntityType {
 
         // Add legacy names
         NAME_MAP.put("xp_orb", EXPERIENCE_ORB);
-        NAME_MAP.put("eye_of_ender_signal", ENDER_SIGNAL);
-        NAME_MAP.put("xp_bottle", THROWN_EXP_BOTTLE);
-        NAME_MAP.put("fireworks_rocket", FIREWORK);
+        NAME_MAP.put("eye_of_ender_signal", EYE_OF_ENDER);
+        NAME_MAP.put("xp_bottle", EXPERIENCE_BOTTLE);
+        NAME_MAP.put("fireworks_rocket", FIREWORK_ROCKET);
         NAME_MAP.put("evocation_fangs", EVOKER_FANGS);
         NAME_MAP.put("evocation_illager", EVOKER);
         NAME_MAP.put("vindication_illager", VINDICATOR);
         NAME_MAP.put("illusion_illager", ILLUSIONER);
-        NAME_MAP.put("commandblock_minecart", MINECART_COMMAND);
-        NAME_MAP.put("snowman", SNOWMAN);
+        NAME_MAP.put("commandblock_minecart", COMMAND_BLOCK_MINECART);
+        NAME_MAP.put("snowman", SNOW_GOLEM);
         NAME_MAP.put("villager_golem", IRON_GOLEM);
-        NAME_MAP.put("ender_crystal", ENDER_CRYSTAL);
+        NAME_MAP.put("ender_crystal", END_CRYSTAL);
     }
 
     private EntityType(/*@Nullable*/ String name, /*@Nullable*/ Class<? extends Entity> clazz, int typeId) {

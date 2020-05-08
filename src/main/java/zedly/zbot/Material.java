@@ -121,6 +121,9 @@ public enum Material {
     BAT_SPAWN_EGG,
     BEACON,
     BEDROCK,
+    BEEHIVE,
+    BEE_NEST,
+    BEE_SPAWN_EGG,
     BEEF,
     BEETROOT,
     /**
@@ -942,6 +945,10 @@ public enum Material {
      * BlockData: {@link AnaloguePowerable}
      */
     HEAVY_WEIGHTED_PRESSURE_PLATE(AnaloguePowerable.class),
+    HONEY_BLOCK,
+    HONEY_BOTTLE,
+    HONEYCOMB,
+    HONEYCOMB_BLOCK,
     /**
      * BlockData: {@link Hopper}
      */
@@ -2235,7 +2242,9 @@ public enum Material {
     /**
      * BlockData: {@link Directional}
      */
-    ZOMBIE_WALL_HEAD(Directional.class);
+    ZOMBIE_WALL_HEAD(Directional.class),
+    
+    ERROR;
 
     
     private final Class<? extends BlockData> blockDataClass;
