@@ -124,9 +124,9 @@ public enum Material {
     BEEF,
     BEETROOT,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    BEETROOTS(Ageable.class),
+    BEETROOTS(AgeableBlock.class),
     BEETROOT_SEEDS,
     BEETROOT_SOUP,
     /**
@@ -359,9 +359,9 @@ public enum Material {
     BUBBLE_CORAL_WALL_FAN(CoralWallFan.class),
     BUCKET,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    CACTUS(Ageable.class),
+    CACTUS(AgeableBlock.class),
     /**
      * BlockData: {@link Cake}
      */
@@ -372,9 +372,9 @@ public enum Material {
     CAMPFIRE(Campfire.class),
     CARROT,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    CARROTS(Ageable.class),
+    CARROTS(AgeableBlock.class),
     CARROT_ON_A_STICK,
     CARTOGRAPHY_TABLE,
     /**
@@ -413,9 +413,9 @@ public enum Material {
     CHISELED_SANDSTONE,
     CHISELED_STONE_BRICKS,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    CHORUS_FLOWER(Ageable.class),
+    CHORUS_FLOWER(AgeableBlock.class),
     CHORUS_FRUIT,
     /**
      * BlockData: {@link MultipleFacing}
@@ -809,9 +809,9 @@ public enum Material {
     FLOWER_POT,
     FOX_SPAWN_EGG,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    FROSTED_ICE(Ageable.class),
+    FROSTED_ICE(AgeableBlock.class),
     /**
      * BlockData: {@link Furnace}
      */
@@ -1068,9 +1068,9 @@ public enum Material {
      */
     JUNGLE_WOOD(Orientable.class),
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    KELP(Ageable.class),
+    KELP(AgeableBlock.class),
     KELP_PLANT,
     KNOWLEDGE_BOOK,
     /**
@@ -1256,9 +1256,9 @@ public enum Material {
     MELON_SEEDS,
     MELON_SLICE,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    MELON_STEM(Ageable.class),
+    MELON_STEM(AgeableBlock.class),
     MILK_BUCKET,
     MINECART,
     MOJANG_BANNER_PATTERN,
@@ -1347,9 +1347,9 @@ public enum Material {
     NETHER_QUARTZ_ORE,
     NETHER_STAR,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    NETHER_WART(Ageable.class),
+    NETHER_WART(AgeableBlock.class),
     NETHER_WART_BLOCK,
     /**
      * BlockData: {@link NoteBlock}
@@ -1555,9 +1555,9 @@ public enum Material {
     PORKCHOP,
     POTATO,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    POTATOES(Ageable.class),
+    POTATOES(AgeableBlock.class),
     POTION,
     POTTED_ACACIA_SAPLING,
     POTTED_ALLIUM,
@@ -1619,9 +1619,9 @@ public enum Material {
     PUMPKIN_PIE,
     PUMPKIN_SEEDS,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    PUMPKIN_STEM(Ageable.class),
+    PUMPKIN_STEM(AgeableBlock.class),
     /**
      * BlockData: {@link Rotatable}
      */
@@ -2052,9 +2052,9 @@ public enum Material {
     STRUCTURE_VOID,
     SUGAR,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    SUGAR_CANE(Ageable.class),
+    SUGAR_CANE(AgeableBlock.class),
     /**
      * BlockData: {@link Bisected}
      */
@@ -2062,9 +2062,9 @@ public enum Material {
     SUSPICIOUS_STEW,
     SWEET_BERRIES,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    SWEET_BERRY_BUSH(Ageable.class),
+    SWEET_BERRY_BUSH(AgeableBlock.class),
     /**
      * BlockData: {@link Bisected}
      */
@@ -2138,9 +2138,9 @@ public enum Material {
     WATER_BUCKET,
     WET_SPONGE,
     /**
-     * BlockData: {@link Ageable}
+     * BlockData: {@link AgeableBlock}
      */
-    WHEAT(Ageable.class),
+    WHEAT(AgeableBlock.class),
     WHEAT_SEEDS,
     /**
      * BlockData: {@link Rotatable}
@@ -6084,6 +6084,10 @@ public enum Material {
                 return 0;
             // </editor-fold>
         }
+    }
+    
+    public boolean isWalkable() {
+        return this == LADDER || this == VINE || isSolid();
     }
 
 }

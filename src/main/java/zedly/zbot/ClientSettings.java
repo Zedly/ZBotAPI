@@ -1,7 +1,5 @@
 package zedly.zbot;
 
-import zedly.zbot.ChatMode;
-
 public class ClientSettings {
 
     private String locale = "en_US";

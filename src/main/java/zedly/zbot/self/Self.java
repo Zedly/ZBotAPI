@@ -68,7 +68,18 @@ public interface Self extends Player {
 
     void clickBlock(Location loc);
 
+    void recipeBookStatus(String recipeId,
+            boolean blastingRecipeBookOpen, boolean blastingRecipeFilterActive,
+            boolean smokingRecipeBookOpen, boolean smokingRecipeFilterActive);
+
+    void recipeBookStatus(boolean craftingRecipeBookOpen, boolean craftingRecipeFilterActive,
+            boolean smeltingRecipeBookOpen, boolean smeltingRecipeFilterActive,
+            boolean blastingRecipeBookOpen, boolean blastingRecipeFilterActive,
+            boolean smokingRecipeBookOpen, boolean smokingRecipeFilterActive);
+
     void registerEvents(Listener listener);
+
+    void requestRecipe(String recipeId, boolean makeAll);
 
     void respawn();
 

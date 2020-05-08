@@ -40,12 +40,12 @@ public class SphericalVector extends Vector {
     public double getRadius() {
         return radius;
     }
-    
+
     @Override
     public double getLength() {
         return radius;
     }
-    
+
     @Override
     public double getHorizontalLength() {
         return radius * Math.cos(pitch);
@@ -94,5 +94,10 @@ public class SphericalVector extends Vector {
     @Override
     public SphericalVector toSpherical() {
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "{SphericalVector yaw:" + yaw + " pitch: " + pitch + " radius: " + radius + "}";
     }
 }

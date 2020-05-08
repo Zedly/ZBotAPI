@@ -8,7 +8,7 @@ package zedly.zbot.block.data;
  * equal to {@link #getMaximumAge()} indicates that the crop is ripe and ready
  * to be harvested.
  */
-public interface Ageable extends BlockData {
+public interface AgeableBlock extends BlockData {
 
     /**
      * Gets the value of the 'age' property.

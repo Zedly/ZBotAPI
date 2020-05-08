@@ -10,11 +10,11 @@ package zedly.zbot.util;
  */
 public class CylindricalVector extends Vector {
 
-    private double yaw, y, hr;
+    private double yaw, y, radius;
 
     public CylindricalVector(double yaw, double hr, double y) {
         this.yaw = yaw;
-        this.hr = hr;
+        this.radius = hr;
         this.y = y;
     }
 
@@ -46,17 +46,17 @@ public class CylindricalVector extends Vector {
     @Deprecated
     @Override
     public double getRadius() {
-        return Math.sqrt(hr * hr + y * y);
+        return Math.sqrt(radius * radius + y * y);
     }
 
     @Override
     public double getLength() {
-        return Math.sqrt(hr * hr + y * y);
+        return Math.sqrt(radius * radius + y * y);
     }
-    
+
     @Override
     public double getHorizontalLength() {
-        return hr;
+        return radius;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class CylindricalVector extends Vector {
 
     @Override
     public Vector multiply(double d) {
-        return new CylindricalVector(yaw, hr * d, y * d);
+        return new CylindricalVector(yaw, radius * d, y * d);
     }
 
     @Override
@@ -103,4 +103,10 @@ public class CylindricalVector extends Vector {
     public SphericalVector toSpherical() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public String toString() {
+        return "{CylindricalVector yaw:" + yaw + " y: " + y + " radius: " + radius + "}";
+    }
+
 }

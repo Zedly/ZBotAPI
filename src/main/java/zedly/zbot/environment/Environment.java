@@ -22,4 +22,10 @@ public interface Environment {
     
     int getDifficulty();
     
+    long getTimeOfDay();
+    
+    long getWorldAge();
+    
+    Location getSpawnPoint();
+    
 }

@@ -1,7 +1,7 @@
 package zedly.zbot.block.data.type;
 
-import zedly.zbot.block.data.Ageable;
 import zedly.zbot.block.data.Directional;
+import zedly.zbot.block.data.AgeableBlock;
 
-public interface Cocoa extends Ageable, Directional {
+public interface Cocoa extends AgeableBlock, Directional {
 }

@@ -36,4 +36,7 @@ public abstract class Vector {
     public abstract CylindricalVector toCylindrical();
 
     public abstract SphericalVector toSpherical();
+    
+    @Override
+    public abstract String toString();
 }
