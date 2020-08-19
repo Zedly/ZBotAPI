@@ -27,7 +27,11 @@ public interface Self extends Player {
 
     Environment getEnvironment();
 
+    int getFoodLevel();
+
     Inventory getInventory();
+    
+    double getSaturation();
 
     ServerConnection getServerConnection();
 
@@ -67,6 +71,12 @@ public interface Self extends Player {
     void clickBlock(int x, int y, int z);
 
     void clickBlock(Location loc);
+
+    void eatHeldItem();
+    
+    void eatHeldItem(int usedHand);
+
+    void eatHeldItem(int usedHand, Runnable callback);
 
     void recipeBookStatus(String recipeId,
             boolean blastingRecipeBookOpen, boolean blastingRecipeFilterActive,

@@ -10,6 +10,8 @@ public interface Environment {
 
     Collection<Entity> getEntities();
     
+    <T extends Entity> Collection<T> getEntities(Class<T> cls);
+    
     Entity getEntityById(int entityId);
 
     String getPlayerNameByUUID(UUID uuid);
