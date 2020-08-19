@@ -76,8 +76,6 @@ public interface Self extends Player {
     
     void eatHeldItem(int usedHand);
 
-    void eatHeldItem(int usedHand, Runnable callback);
-
     void recipeBookStatus(String recipeId,
             boolean blastingRecipeBookOpen, boolean blastingRecipeFilterActive,
             boolean smokingRecipeBookOpen, boolean smokingRecipeFilterActive);
@@ -113,6 +111,8 @@ public interface Self extends Player {
 
     void sprint(boolean sprint);
 
+    void stopEating();
+    
     void swingArm(boolean leftHand);
 
     void useItem(boolean leftHand);
