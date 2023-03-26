@@ -8,6 +8,8 @@ public class ClientSettings {
     private boolean chatColorsEnabled = true;
     private int skinFlags = 0x7F;
     private boolean leftHanded = true;
+    private boolean enableTextFiltering = true;
+    private boolean allowServerListings = true;
 
     public String getLocale() {
         return locale;
@@ -55,6 +57,34 @@ public class ClientSettings {
 
     public void setLeftHanded(boolean leftHanded) {
         this.leftHanded = leftHanded;
+    }
+
+    /**
+     * @return the enabletextfiltering
+     */
+    public boolean isEnableTextFilterring() {
+        return enableTextFiltering;
+    }
+
+    /**
+     * @param enabletextfiltering the enabletextfiltering to set
+     */
+    public void setEnableTextFiltering(boolean enabletextfiltering) {
+        this.enableTextFiltering = enabletextfiltering;
+    }
+
+    /**
+     * @return the allowserverlistings
+     */
+    public boolean isAllowServerListings() {
+        return allowServerListings;
+    }
+
+    /**
+     * @param allowserverlistings the allowserverlistings to set
+     */
+    public void setAllowServerListings(boolean allowserverlistings) {
+        this.allowServerListings = allowserverlistings;
     }
 
 }

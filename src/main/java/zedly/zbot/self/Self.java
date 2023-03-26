@@ -54,38 +54,31 @@ public interface Self extends Player {
 
     void moveTo(Location loc);
 
-    void performAction(int action);
+    //void performAction(int action);
 
-    void placeBlock(int x, int y, int z, BlockFace face);
+    int placeBlock(int x, int y, int z, BlockFace face);
 
-    void placeBlock(Location loc, BlockFace face);
+    int placeBlock(Location loc, BlockFace face);
 
-    void breakBlock(int x, int y, int z);
+    int breakBlock(int x, int y, int z);
 
-    void breakBlock(int x, int y, int z, int millis, Runnable callback);
+    int breakBlock(int x, int y, int z, int millis, Runnable callback);
 
-    void breakBlock(Location loc);
+    int breakBlock(Location loc);
 
-    void breakBlock(Location loc, int millis, Runnable callback);
+    int breakBlock(Location loc, int millis, Runnable callback);
 
-    void clickBlock(int x, int y, int z);
+    int clickBlock(int x, int y, int z);
 
-    void clickBlock(Location loc);
+    int clickBlock(Location loc);
 
-    void eatHeldItem();
+    int eatHeldItem();
     
-    void eatHeldItem(int usedHand);
+    int eatHeldItem(int usedHand);
 
-    void eatHeldItem(int usedHand, Runnable callback);
+    int eatHeldItem(int usedHand, Runnable callback);
 
-    void recipeBookStatus(String recipeId,
-            boolean blastingRecipeBookOpen, boolean blastingRecipeFilterActive,
-            boolean smokingRecipeBookOpen, boolean smokingRecipeFilterActive);
-
-    void recipeBookStatus(boolean craftingRecipeBookOpen, boolean craftingRecipeFilterActive,
-            boolean smeltingRecipeBookOpen, boolean smeltingRecipeFilterActive,
-            boolean blastingRecipeBookOpen, boolean blastingRecipeFilterActive,
-            boolean smokingRecipeBookOpen, boolean smokingRecipeFilterActive);
+    void recipeBookStatus(int bookType, boolean open, boolean filterActive);
 
     void registerEvents(Listener listener);
 
@@ -113,11 +106,11 @@ public interface Self extends Player {
 
     void sprint(boolean sprint);
 
-    void stopEating();
+    int stopEating();
     
     void swingArm(boolean leftHand);
 
-    void useItem(boolean leftHand);
+    int useItem(boolean leftHand);
 
     void unregisterEvents(Listener listener);
 
