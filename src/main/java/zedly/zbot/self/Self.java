@@ -113,6 +113,8 @@ public interface Self extends Player {
 
     void sprint(boolean sprint);
 
+    void stopEating();
+    
     void swingArm(boolean leftHand);
 
     void useItem(boolean leftHand);
